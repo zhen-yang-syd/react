@@ -34,13 +34,32 @@ import * as serviceWorker from './serviceWorker';
 // );
 
 //functional components with props
-function Welcome(props){
-return <h1>Hi,{props.name}</h1>
+// function Welcome(props){
+// return <h1>Hi,{props.name}</h1>
+// }
+// ReactDOM.render(
+//   <Welcome name="zhen" />,
+//   document.querySelector('#root')
+// )
+
+//home work1
+function Card(props){
+  const divStyle = {
+    backgroundImage: 'url(' + `${props.img}` + ')',
+  };
+  return  <div className="container">
+            <div id="picture" style={divStyle}></div>
+            <div id="des">
+              <strong className="title">{props.title}</strong>
+              <p className="subtitle">{props.subtitle}</p>
+            </div>
+          </div>
 }
 ReactDOM.render(
-  <Welcome name="zhen" />,
+  <Card img="https://drscdn.500px.org/photo/1015140125/q%3D80_h%3D600/v2?sig=68f32ebdc23acba9269eb006e8603ffb5f25010f7aca2e6ea6f0d0e29b547676" title="This is title" subtitle="Something..."  />,
   document.querySelector('#root')
 )
+
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
