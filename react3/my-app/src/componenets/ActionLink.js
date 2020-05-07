@@ -1,8 +1,8 @@
 import React from 'react';
 class ActionLink extends React.Component{
-    constructor(){
-        super()
-    }
+    // constructor(){
+    //     super()
+    // }
     handleClick =(e)=>{console.log(e); e.preventDefault();}
     render(){
         return(
